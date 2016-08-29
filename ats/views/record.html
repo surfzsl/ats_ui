@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="../js/easyui/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="../js/easyui/themes/icon.css" />
+<title>ATS</title>
+
+</head>
+<body>
+	<div>
+		<table id="recordlist" class="easyui-datagrid" style="width:100%;height:700px"
+			title="DataGrid - VirtualScrollView"
+			data-options="view:scrollview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:20, pagination:true,
+						pageList: [20, 60, 200],">
+			<thead style="height:100%">
+				<tr>
+					<th field="Name" width="80">Record Name</th>
+					<th field="Model" width="100">Model</th>
+					<th field="Container" width="80">Container</th>
+					<th field="FieldSize" width="80" >No. Field</th>
+					<th field="Owner" width="80" >Owner</th>
+					<th field="Group" width="100" >Group</th>
+					<th field="ModifiedDate" width="110">Modified Date</th>
+					<th field="OtherRights" width="100" >Other Rights</th>
+					<th field="GroupRights" width="100" >Group Rights</th>
+					<th field="DateFid" width="100" >TimeStamp Date</th>
+					<th field="TimeFid" width="100" >TimeStamp Date</th>
+					<th field="RecordTimestamp" width="100" >Restored</th>
+					<th field="TemplatedId" width="100" >Template</th>
+					<th field="PE" width="100" >PE</th>
+					<th field="PPE" width="100" >PPE</th>
+					<th field="LastContrib" width="100" >Last Contribution Date</th>
+					<th field="LastContribTime" width="100" >Last Contribution Time</th>
+					<th field="LastContribUserId" width="100" >Last Contributor</th>
+					<th field="Description" width="100" >Description</th>
+				</tr>
+			</thead>
+		</table>	
+	</div>
+	<div id="menus" style="padding:5px">
+		<div>
+			<a href="#" class="easyui-linkbutton" plain="true"> Create </a>
+			<a href="#" class="easyui-linkbutton" plain="true"> Edit </a>
+			<a href="#" class="easyui-linkbutton" plain="true"> Create </a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.js"></script>
+	<script type="text/javascript" src="../js/jquery.form.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../session/session.js"></script>
+	<script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../js/easyui/datagrid-scrollview.js"></script>
+	<script type="text/javascript" src="../js/record.js"></script>
+</body>
+</html>

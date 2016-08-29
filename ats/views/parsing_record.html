@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function alertme(){
+var textarea = document.getElementById("pagedata");  
+var selection = (textarea.value).substring(textarea.selectionStart,textarea.selectionEnd);
+//alert (selection);
+document.getElementById("source").value=selection;
+}
+</script>
+<title>ATS</title>
+
+<body>
+	<div class="easyui-layout" style="height:600px;">
+        <div id="east" data-options="region:'east',split:true" title="East" style="width:300px;">
+        	<table id="target" class="easyui-datagrid" title="Parsing Result" style="width:700px;height:250px"
+					data-options="rownumbers:false,singleSelect:false,url:'http://localhost/server.php',method:'post'">
+				
+			</table>
+			
+        </div>
+        <div id="west" data-options="region:'west',split:true" title="West" style="width:700px;">
+        	<div class="easyui-tabs" data-options="fit:true,border:false,plain:true">
+				<p>
+					<label for="source data">source data:</label>
+					<input type="text" name="source" class="text" id="source" />
+				</p>
+				<p>
+					<label for="select">select       :</label>
+					<input type="text" name="select" class="text" id="select" />
+				</p>
+				<p>
+					<textarea id="pagedata" rows="25" cols="80"> 11.4 11.5</textarea>
+				</p>
+				<p>
+				<button id="setdata" onclick="alertme()" >set</button>
+				<input id="bt_next" type="button" name="bt_next" class="bt_next" value="next"> 
+				</p>
+			</div>
+        </div>  
+    </div>
+    <div id="south" data-options="region:'south', split:true" title="South">
+        <table id="parsing_table" class="easyui-datagrid" title="Parsing Result" style="width:700px;height:250px"
+				data-options="rownumbers:false,singleSelect:false,url:'datagrid_data1.json',method:'post'">
+			<thead>
+				<tr>
+					<th data-options="field:'ck',checkbox:true"></th>
+					<th data-options="field:'Name',width:80">field Name</th>
+					<th data-options="field:'Name',width:100">Original Field Name</th>
+					<th data-options="field:'Data',width:80,align:'right'">Current Value</th>
+				</tr>
+			</thead>
+		</table>
+		<p>
+		<input type="button" name="Back" id="Back" value="<Back">
+		<input type="button" name="Add" id="Add" value="Add Field">
+		</p>
+    </div>    
+    <div>
+    <form id=""></form>
+    </div>
+	<link rel="stylesheet" type="text/css" href="../js/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../js/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/easyui/jquery.easyui.min.js"></script>
+	
+	<script type="text/javascript" src="../js/parsing_record.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+</body>
+</html>

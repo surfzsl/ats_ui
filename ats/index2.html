@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ui.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/index2.js"></script>
+<script type="text/javascript" src="js/sha256.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+
+<div id="header">
+	<div class="header_main">
+		<div class="header_member">
+			<a href="javascript:void(0)" id="member">user</a>
+			<a href="javascript:void(0)" id="logout">logout</a>
+		</div>
+	</div>
+</div>
+
+<form id="login" title="ATS Login" method="post">
+	<ol class="login_error"></ol>
+	<p>
+		<label for="user">username:</label>
+		<input type="text" name="name" class="text" id="name" />
+	</p>
+	<p>
+		<label for="pass"> password :</label>
+		<input type="password" name="Password" class="text" id="Password" />
+	</p>
+	<p>
+		<input type="submit" id="submit" value="login"/>
+	</p>
+	<p>
+		<input type="checkbox" name="expires" id="expires" checked="checked" /><label for="expires">remember me for a week</label>
+	</p>
+
+	
+</form>
+<div id="loading">loading...</div>
+
+
+</body>
+</html>

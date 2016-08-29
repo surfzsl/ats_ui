@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyui/datagrid-scrollview.js"></script>
+	<script type="text/javascript" src="js/easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.js"></script>
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="session/session.js"></script>
+	<script type="text/javascript" src="js/demo.js"></script>
+
+
+	
+</head>
+<body>
+	<h2>DataGrid Virtual Scroll View Demo</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Drag the vertical scroll and release it to navigate to the desired page.</div>
+	</div>
+	
+	<div style="margin-bottom:10px">
+		<select onchange="load(this.value)">
+			<option value="remote">Load Remote Data</option>
+			<option value="local">Load Local Data</option>
+		</select>
+	</div>
+	
+	<table id="tt" class="easyui-datagrid" style="width:700px;height:300px"
+			title="DataGrid - VirtualScrollView"
+			data-options="view:scrollview,rownumbers:true,singleSelect:true,autoRowHeight:false,pageSize:50, pagination:true,pageSize: 50,
+						pageList: [50, 100, 200],">
+		<thead>
+			<tr>
+				<th field="Name" width="80">Inv No</th>
+				<th field="Model" width="100">Date</th>
+				<th field="Group" width="80">Name</th>
+				<th field="Container" width="80" align="right">Amount</th>
+				<th field="Owner" width="80" align="right">Price</th>
+				<th field="GroupRights" width="100" align="right">Cost</th>
+				<th field="FieldSize" width="110">Note</th>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>
