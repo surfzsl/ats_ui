@@ -69,7 +69,7 @@ $(function() {
 				//alert(tmp);
 
 				function(data){
-					alert(data);
+					//alert(data);
 					var response = $.parseJSON(data);
 					$("#recordlist").datagrid("loadData", response);
 			});

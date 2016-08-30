@@ -131,7 +131,7 @@ $(document).ready(function() {
             url: "http://localhost/server.php",
             //提交的数据
             data: {
-                Actionp: "parsing",
+                Action: "PARSING",
                 Content: "data",
                 SourceData: $("#source").value,
                 SessionId: "aaaaaaa",
@@ -144,16 +144,16 @@ $(document).ready(function() {
                 //alert(data);
                 var method = "";
                 var response = $.parseJSON(data);
-                for (var i = response.List.length - 1; i >= 0; i--) {
-                    var bt = $('<input type=\"button\" class="bt_method" value=\"' + response.List[i].Name + '\"' + "id=" + response.List[i].Name + 'onclick="showcontent()"' + "/>");
+                for (var i = response[0].List.length - 1; i >= 0; i--) {
+                    var bt = $('<input type=\"button\" class="bt_method" value=\"' + response[0].List[i].Name + '\"' + "id=" + response[0].List[i].Name + 'onclick="showcontent()"' + "/>");
                     $("#east").append(bt);
                 }
 
 
                 $(".bt_method").click(function() {
-                    for (var i = response.List.length - 1; i >= 0; i--) {
-                        if (response.List[i].Name == this.value) {
-                            $("#parsing_table").datagrid("loadData", response.List[i].FieldList);
+                    for (var i = response[0].List.length - 1; i >= 0; i--) {
+                        if (response[0].List[i].Name == this.value) {
+                            $("#parsing_table").datagrid("loadData", response[0].List[i].FieldList);
                             method = this.value;
                         }
                     }
