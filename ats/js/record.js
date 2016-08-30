@@ -52,7 +52,7 @@ $(function() {
 		$.post("http://localhost/server.php", {
 				SessionId: $.cookie('session'),
 				Action: "R",
-				Content: "Recordlist",
+				Content: "RECORDLIST",
 				SourceData: "",
 			},
 
@@ -71,7 +71,7 @@ $(function() {
 				function(data){
 					alert(data);
 					var response = $.parseJSON(data);
-				//$("#recordlist").datagrid("loadData", response);
+					$("#recordlist").datagrid("loadData", response);
 			});
 		//} else {
 		//	window.location.href = "/ats";
